@@ -10,14 +10,15 @@
 
 Для начала нужно создать папку,  в которой будут размещаться файлы нашего нового пространства.
 mkdir Space
+
 mkdir Space/bin
 Затем поместим туда исполняемые файлы командного интерпретатора bash.
 cp /bin/bash Space/bin
 
 Создадим там также папочки для хаанения зависимостей.
-root@vg-VirtualBox:/home/vg# mkdir Space/lib
+ mkdir Space/lib
 
-root@vg-VirtualBox:/home/vg# mkdir Space/lib64
+ mkdir Space/lib64
 
 
 Затем нужно посмотреть библотеки от которых мы будем зависеть.
