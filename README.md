@@ -14,9 +14,11 @@ mkdir Space
 
 mkdir Space/bin
 
+
 Затем поместим туда исполняемые файлы командного интерпретатора bash.
 
 cp /bin/bash Space/bin
+
 
 Создадим там также папочки для хаанения зависимостей.
 
@@ -37,6 +39,7 @@ cp /lib/x86_64-linux-gnu/libc.so.6 Space/lib
 
 cp /lib64/ld-linux-x86-64.so.2 Space/lib64
 
+
 Затем посмотрим библотеки ls.
 
 ldd /bin/ls
@@ -51,14 +54,15 @@ cp /lib/x86_64-linux-gnu/libpcre2-8.so.0 Space/lib
 
 cp /lib64/ld-linux-x86-64.so.2 Space/lib64
 
-Тепеь можно попробовать поменять корень.
+
+Теперь можно попробовать поменять корень.
 
 chroot Space/
 
 <img width="2048" alt="Снимок экрана 2023-05-18 в 14 00 37" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/5106f6c6-7db3-4a3a-a9fb-696b6b2f698d">
 
 
-Тепеь попробуем заизолирваться по сети. Для это посомтрим, что у нас с ними.
+Тепеь попробуем заизолироваться по сети. Для это посмотрим, что у нас с ними.
 
 exit 
 
