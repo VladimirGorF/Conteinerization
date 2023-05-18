@@ -23,18 +23,18 @@ root@vg-VirtualBox:/home/vg# mkdir Space/lib64
 ldd /bin/bash
 
 Затем эти зависимости копиуем к себе в папку 
-vg@vg-VirtualBox:~$ cp /lib/x86_64-linux-gnu/libtinfo.so.6 Space/lib
-vg@vg-VirtualBox:~$ cp /lib/x86_64-linux-gnu/libc.so.6 Space/lib
-vg@vg-VirtualBox:~$ cp /lib64/ld-linux-x86-64.so.2 Space/lib64
+cp /lib/x86_64-linux-gnu/libtinfo.so.6 Space/lib
+cp /lib/x86_64-linux-gnu/libc.so.6 Space/lib
+cp /lib64/ld-linux-x86-64.so.2 Space/lib64
 
 Затем нужно посмотреть библотеки от которых мы будем зависеть.
 ldd /bin/ls
 
 И скопировать их к себе в Space.
-vg@vg-VirtualBox:~$ cp /lib/x86_64-linux-gnu/libselinux.so.1 Space/lib
-vg@vg-VirtualBox:~$ cp /lib/x86_64-linux-gnu/libc.so.6 Space/lib
-vg@vg-VirtualBox:~$ cp /lib/x86_64-linux-gnu/libpcre2-8.so.0 Space/lib
-vg@vg-VirtualBox:~$ cp /lib64/ld-linux-x86-64.so.2 Space/lib64
+cp /lib/x86_64-linux-gnu/libselinux.so.1 Space/lib
+cp /lib/x86_64-linux-gnu/libc.so.6 Space/lib
+cp /lib/x86_64-linux-gnu/libpcre2-8.so.0 Space/lib
+cp /lib64/ld-linux-x86-64.so.2 Space/lib64
 
 Тепеь можно попровбовать поменять корень.
 chroot Space/
