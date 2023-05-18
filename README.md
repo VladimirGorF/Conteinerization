@@ -58,5 +58,32 @@ chroot Space/
 <img width="2048" alt="Снимок экрана 2023-05-18 в 14 00 37" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/5106f6c6-7db3-4a3a-a9fb-696b6b2f698d">
 
 
+Тепеь попробуем заизолирваться по сети. Для это посомтрим, что у нас с ними.
+
+exit 
+
+ip a
+
+<img width="2048" alt="Снимок экрана 2023-05-18 в 14 10 51" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/af2cda74-fe66-4312-ba3b-4c345c85bd62">
+
+
+
+Теперь применим команду.
+
+unshare --net --pid --fork --mount-proc /bin/bash
+
+Результат
+<img width="2048" alt="Снимок экрана 2023-05-18 в 14 47 14" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/2a9af9bf-4e1b-4197-bbbe-a0d6d622ec77">
+
+Теперь посмотрим процеессы. У нас появился процесс за номером 1. Значит мы в новом простанстве осущестялвяем самостоятельные процессы.
+
+<img width="2048" alt="Снимок экрана 2023-05-18 в 14 48 21" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/7787c8af-bd52-4557-8ff9-939f499181c6">
+
+
+
+
+
+
+
 
 
