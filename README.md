@@ -12,6 +12,7 @@
 mkdir Space
 
 mkdir Space/bin
+
 Затем поместим туда исполняемые файлы командного интерпретатора bash.
 cp /bin/bash Space/bin
 
