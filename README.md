@@ -37,7 +37,7 @@ cp /lib/x86_64-linux-gnu/libc.so.6 Space/lib
 
 cp /lib64/ld-linux-x86-64.so.2 Space/lib64
 
-Затем нужно посмотреть библотеки от которых мы будем зависеть.
+Затем посмотрим библотеки ls.
 
 ldd /bin/ls
 
