@@ -55,6 +55,7 @@ mysql> CREATE TABLE Products
 INSERT Products(ProductName, Manufacturer, ProductCount, Price) 
 VALUES ('iPhone X', 'Apple', 5, 76000);
 
+<img width="2048" alt="Снимок экрана 2023-05-25 в 17 40 22" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/195f3689-5586-4651-be2d-5d9564f4a26f">
 
 
 
