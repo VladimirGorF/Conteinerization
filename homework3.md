@@ -23,26 +23,34 @@
 
 
 Запсутим контейнеры с mysql и  phpmyadmin(поскольку у нас их нет, то система. автоматически их найдет и загрузит), уствановив правила проброса порто для соединеня c хостом. 
+
   459  docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8.0.31
+  
   460  docker run --name myphp -d --link some-mysql:db -p 8081:80 phpmyadmin/phpmyadmin
   
   
   Убедимся что они запустились.
+  
   461  docker ps -a
   
   Заупстим mysql.
+  
   462  docker exec -it some-mysql mysql -uroot -p
   
   Посмотрим имеющиеся базы данных.
+  
   SHOW DATABASES;
   
 Создаем новую БД.
+
 CREATE DATABASE my_database;
 
 Заходим в нее.
+
 use my_database;
 
 Создадим в ней табличку.
+
 mysql> CREATE TABLE Products
     -> (
     ->     Id INT AUTO_INCREMENT PRIMARY KEY,
@@ -51,7 +59,8 @@ mysql> CREATE TABLE Products
     ->     ProductCount INT DEFAULT 0,
     ->     Price DECIMAL NOT NULL
     -> );
-Вставим данные в нее.   
+Вставим данные в нее. 
+
 INSERT Products(ProductName, Manufacturer, ProductCount, Price) 
 VALUES ('iPhone X', 'Apple', 5, 76000);
 
