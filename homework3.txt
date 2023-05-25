@@ -33,8 +33,28 @@
   Заупстим mysql.
   462  docker exec -it some-mysql mysql -uroot -p
   
+  Посмотрим имеющиеся базы данных.
+  SHOW DATABASES;
   
 Создаем новую БД.
-
 CREATE DATABASE my_database;
+
+Заходим в нее.
+use my_database;
+
+Создадим в ней табличку.
+mysql> CREATE TABLE Products
+    -> (
+    ->     Id INT AUTO_INCREMENT PRIMARY KEY,
+    ->     ProductName VARCHAR(30) NOT NULL,
+    ->     Manufacturer VARCHAR(20) NOT NULL,
+    ->     ProductCount INT DEFAULT 0,
+    ->     Price DECIMAL NOT NULL
+    -> );
+Вставим данные в нее.   
+INSERT Products(ProductName, Manufacturer, ProductCount, Price) 
+VALUES ('iPhone X', 'Apple', 5, 76000);
+
+
+
 
