@@ -20,4 +20,5 @@ COPY ./apptest/app.py  /app/app.py
 WORKDIR /app
 CMD ["python3", "app.py"]
 
-![Uploading Снимок экрана 2023-05-29 в 18.54.15.png…]()
+<img width="2048" alt="Снимок экрана 2023-05-29 в 18 54 15" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/7dab165d-28e9-4db5-82cc-1335c6273a72">
+
