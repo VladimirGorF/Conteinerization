@@ -25,5 +25,6 @@ WORKDIR /app
 
 CMD ["python3", "app.py"]
 
-<img width="2048" alt="Снимок экрана 2023-05-29 в 18 54 15" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/7dab165d-28e9-4db5-82cc-1335c6273a72">
+<img width="2048" alt="Снимок экрана 2023-05-29 в 18 57 33" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/51efdbcc-e4d9-4a16-8dab-0373434b3feb">
+
 
