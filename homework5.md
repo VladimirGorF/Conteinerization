@@ -16,17 +16,28 @@
 version: "3.9"
 
 services:
+
   db:
+  
     image: mysql:latest
+    
     restart: always
+    
     environment:
+    
       MYSQL_ROOT_PASSWORD: 1
+      
 
   wordpress:
+  
     image: wordpress:latest
+    
     ports:
+    
       - "8000:81"
+      
     restart: always
+    
   
 Запустим развертывание контейнеров из нашего yaml-файла.
 
