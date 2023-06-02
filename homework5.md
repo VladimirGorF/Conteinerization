@@ -44,6 +44,7 @@ services:
   docker-compose up -d
   
 Посмотрим что получилось.
+
   docker-compose ps -a
   
   <img width="2048" alt="Снимок экрана 2023-06-02 в 13 31 07" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/da594e72-14a1-4282-b072-12fff4cb9496">
