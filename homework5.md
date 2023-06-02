@@ -17,35 +17,26 @@ version: "3.9"
 
 services:
   db:
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
+    image: mysql:latest
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 1
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: 1
 
   wordpress:
-    depends_on:
-      - db
     image: wordpress:latest
     ports:
-      - "8000:80"
+      - "8000:81"
     restart: always
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: 1
-      WORDPRESS_DB_NAME: wordpress
-volumes:
-  db_data: {}
   
 Запустим развертывание контейнеров из нашего yaml-файла.
 
   docker-compose up -d
   
+Посмотрим что получилось.
+  docker-compose ps -a
+  
+  <img width="2048" alt="Снимок экрана 2023-06-02 в 13 31 07" src="https://github.com/VladimirGorF/Conteinerization/assets/110591063/da594e72-14a1-4282-b072-12fff4cb9496">
+
   
   
   
